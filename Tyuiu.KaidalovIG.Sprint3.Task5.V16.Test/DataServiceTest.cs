@@ -8,15 +8,18 @@ namespace Tyuiu.KaidalovIG.Sprint3.Task5.V16.Test
     public class DataServiceTest
     {
         [TestMethod]
-        public void ValidGetSumTheDivisors()
+        public void ValidGetSumSumSeries()
         {
             DataService ds = new DataService();
 
-            int startValue = 17;
-            int stopValue = 26;
+            int x = 2;
+            int startValue1 = 1;
+            int stopValue1 = 3;
+            int startValue2 = 1;
+            int stopValue2 = 10;
 
-            int res = ds.GetSumTheDivisors(startValue, stopValue);
-            int wait = 41;
+            double res = ds.GetSumSumSeries(x, startValue1, startValue2, stopValue1, stopValue2);
+            double wait = 115.748;
 
             Assert.AreEqual(wait, res);
         }

@@ -7,23 +7,20 @@ using tyuiu.cources.programming.interfaces.Sprint3;
 
 namespace Tyuiu.KaidalovIG.Sprint3.Task5.V16.Lib
 {
-    public class DataService : ISprint3Task6V24
+    public class DataService : ISprint3Task5V16
     {
-        public int GetSumTheDivisors(int startValue, int stopValue)
+        public double GetSumSumSeries(int x, int startValue1, int startValue2, int stopValue1, int stopValue2)
         {
-            int x;
-            int count = 0;
-            for (x = startValue; x <= stopValue; x++)
+            double sumSeries = 0;
+            int i, j;
+            for (i = startValue1; i <= stopValue1; i++)
             {
-                for (int d = 1; d <= x; d++)
+                for (j = startValue2; j <= stopValue2; j++)
                 {
-                    if (x % d == 0)
-                    {
-                        count++;
-                    }
+                    sumSeries = sumSeries + (Math.Cos(j) + Math.Pow(x, 2));
                 }
             }
-            return count;
+            return Math.Round(sumSeries, 3);
         }
     }
 }
